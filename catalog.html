@@ -6,42 +6,57 @@
   </head>
   <body>
 	<header class = 'main-header'>
-		<h1 class = 'top-logo'><a href = 'index.html'>DEVICE</a></h1>
-		<nav class = 'main-nav'>
+		<p class = 'top-logo'><a href = 'index.html'>DEVICE</a></p>
+		<div class = 'top-menu'>
 			<div class = 'user-navigation-top'>
-				<span class = 'search'></span>
-				<span class = 'login-button'>Войти</span>
-				<p class = 'profile'><a href = 'profile.html'>#имя</a></p>
-				<span class = 'logout-button'>Выйти</span>
-				<p class = 'compare'><a href = 'compare.html'>Сравнить</a></p>
-				<p class = 'basket'><a href = 'basket.html'>Корзина</a></p>
+				<div>
+					<form>
+						<input type = 'search' name = 'q' placeholder = 'Поиск по сайту' class = 'search-form'>
+						<input type = 'submit' class = 'search-button' value = 'Найти'>
+					</form>
+				</div>
+				
+				<div>
+					<p class = 'profile'><a href = 'profile.html'>#имя</a></p>
+					<p class = 'exit'><a href = 'exit.html'>Выйти</a></p>
+					<p class = 'compare'><a href = 'compare.html'>Сравнить</a></p>
+					<p class = 'basket'><a href = 'basket.html'>Корзина</a></p>
+				</div>
 			</div>
-			
-			<ul class = 'site-navigation-top'>
-				<li><a href = 'catalog.html'>Каталог товаров</a></li>
-				<li><a href = '#recieve'>Доставка</a></li>
-				<li><a href = '#guarantee'>Гарантия</a></li>
-				<li><a href = '#contacts'>Контакты</a></li>
-			</ul>
-			
-			<ul class = 'catalog-menu'> 
-				<li><a href = 'catalog/VR.html'>Виртуальная реальность</a></li>
-				<li><a href = 'catalog/selfy_monopod.html'>Моноподы для селфи</a></li>
-				<li><a href = 'catalog/action_camera.html'>Экшн-камеры</a></li>
-				<li><a href = 'catalog/fitness_bracelet.html'>Фитнес-браслеты</a></li>
-				<li><a href = 'catalog/smart_watch.html'>Умные часы</a></li>
-				<li><a href = 'catalog/copter.html'>Квадрокоптеры</a></li>
-			</ul>
-		</nav>
+
+			<nav class = 'main-nav'>
+				<ul class = 'site-navigation-top'>
+					<li>
+						<a href = 'catalog.html'>Каталог товаров</a>
+						<ul class = 'catalog-menu'>
+							<li><a href = 'catalog/VR.html'>Виртуальная реальность</a></li>
+							<li><a href = 'catalog/selfy_monopod.html'>Моноподы для селфи</a></li>
+							<li><a href = 'catalog/action_camera.html'>Экшн-камеры</a></li>
+						</ul>
+						<ul class = 'catalog-menu'>
+							<li><a href = 'catalog/fitness_bracelet.html'>Фитнес-браслеты</a></li>
+							<li><a href = 'catalog/smart_watch.html'>Умные часы</a></li>
+						</ul>
+						<ul class = 'catalog-menu'>
+							<li><a href = 'catalog/copter.html'>Квадрокоптеры</a></li>
+						</ul>
+					</li>
+					<li><a href = 'index.html/#recieve'>Доставка</a></li>
+					<li><a href = 'index.html/#guarantee'>Гарантия</a></li>
+					<li><a href = 'index.html/#contacts'>Контакты</a></li>
+				</ul>
+			</nav>
+		</div>
 	</header>
 
 	<main>
+		<h1 class = 'hidden'>Каталог магазина DEVICE</h1>
 		<section class = 'overview'>
 			<h2 class = 'page-name'>Моноподы для селфи</h2>
-			<ul class = 'path'>
+			<ul class = 'breadcrumbs'>
 				<li><a href = '../index.html'>Главная</a></li>
 				<li><a href = '../catalog.html'>Каталог товаров</a></li>
-				<li><a href = 'catalog/selfy_monopod.html'>Моноподы для селфи</a></li>
+				<li><a>Моноподы для селфи</a></li>
 			</ul>
 		</section>
 		
@@ -53,82 +68,108 @@
 			<div class = 'right-top'>
 				<h3>Сортировка:</h3>
 				<ul class = 'sort'>
-					<li><span class = 'button button-sort'>По цене</span></li>
-					<li><span class = 'button button-sort'>По типу</span></li>
-					<li><span class = 'button button-sort'>По популярности</span></li>
-					<li><span class = 'button button-sort'>вверх</span></li>
-					<li><span class = 'button button-sort'>вниз</span></li>
+					<li class = 'sort-price'><a href = '#'>По цене</a></li>
+					<li class = 'sort-type'><a href = '#'>По типу</a></li>
+					<li class = 'sort-popular'><a href = '#'>По популярности</a></li>
+					<li class = 'sort-up'><a href = '#'>вверх</a></li>
+					<li class = 'sort-down'><a href = '#'>вниз</a></li>
 				</ul>
 			</div>
 			
-			<div class = 'left-bot'>
+			<form class = 'left-bot'>
 				<div class = 'price'>
 					<h4>Стоимость</h4>
-					<span class = 'button'></span>
+					<input type = 'range' id = 'range-l' name = 'price' min = '0' max = '10000' step = 'any' value = '-0'>
+					<input type = 'range' id = 'range-2' name = 'price' min = '0' max = '10000' step = 'any' value = '1000'>
+					<label for = 'range-1'>От #</label>
+					<label for = 'range-2'>До #</label>
 				</div>
 				<div class = 'color'>
 					<h4>Цвет</h4>
 					<ul>
-						<li><span class = 'button'>Черный</span></li>
-						<li><span class = 'button'>Белый</span></li>
-						<li><span class = 'button'>Синий</span></li>
-						<li><span class = 'button'>Красный</span></li>
-						<li><span class = 'button'>Розовый</span></li>
-					</ul>
+						<li>
+							<input type = 'checkbox' name = 'color' id = 'color-black' checked>
+							<label for = 'color-black'>Черный</label>
+						</li>
+						<li>
+							<input type = 'checkbox' name = 'color' id = 'color-white'>
+							<label for = 'color-white'>Белый</label>
+						</li>
+						<li>
+							<input type = 'checkbox' name = 'color' id = 'color-blue' checked>
+							<label for = 'color-blue'>Синий</label>
+						</li>
+						<li>
+							<input type = 'checkbox' name = 'color' id = 'color-red' checked>
+							<label for = 'color-red'>Красный</label>
+						</li>
+						<li>
+							<input type = 'checkbox' name = 'color' id = 'color-pink'>
+							<label for = 'color-pink'>Розовый</label>
+						</li>
+					</ul>		
 				</div>
 				<div class = 'bluetooth'> 
 					<h4>Bluetooth</h4>
-					<span class = 'button'>Есть</span>
-					<span class = 'button'>Нет</span>
+					<ul>
+						<li>
+						<input type = "radio" id = 'bluetooth-y' name = "bluetooth" value = "y" checked> 
+						<label for = 'bluetooth-y'>Есть</label>
+						</li>
+						<li>
+						<input type = "radio" id = 'bluetooth-n' name = "bluetooth" value = "n"> 
+						<label for = 'bluetooth-n'>Нет</label>
+						</li>
+					</ul>
 				</div>
-				<p><span class = 'interactive button show'>Показать</span></p>
-			</div>
+				
+				<input type = 'submit' class = 'interactive' value = 'Показать'>
+			</form>
 			
 			<div class = 'right-bot'>
 				<ul class = 'goods'>
 					<li>
-						<div class = 'goods-menu'>
-							<span class = 'button'><img src = 'img/1.jpg' alt = 'Любительская селфи-палка'></span>
-							<span class = 'interactive  button to-backet'>В корзину</span>
-							<span class = 'button add-to-compare'>Добавить к сравнению</span>
-						</div>
+						<form>
+							<div class = 'goods-menu'>
+								<figure><img src = 'img/1.jpg' alt = 'Любительская селфи-палка' width = '200' height = '200'></figure>
+								<input type = 'button' class = 'interactive to-backet' value = 'В корзину'>
+								<input type = 'button' class = 'add-to-compare' value = 'Добавить к сравнению'>
+							</div>
 						
-						<b>Любительская селфи-палка</b>
-						<p class = 'price'>500 руб.</p>
+							<b><a href = '#'>Любительская селфи-палка</a></b>
+							<p class = 'price-value'>500 руб.</p>
+						</form>
 					</li>
 					<li>
 					</li>
 				</ul>
 				
-				<nav class = 'pages'>
+				<div class = 'paginaton'>
 					<ul>
-						<li><p>Назад</p></li>
+						<li><a href = '#'>Назад</a></li>
 						<li>
 							<ul class = 'page-number'>
-								<li><span class = 'button'>1</span></li>
-								<li><span class = 'button'>2</span></li>
-								<li><span class = 'button'>3</span></li>
+								<li class = 'current-page'><a href = '#'>1</a></li>
+								<li><a href = '#'>2</a></li>
+								<li><a href = '#'>3</a></li>
 							</ul>
 						</li>
-						<li><p>Вперед</p></li>
+						<li><a href = '#'>Вперед</a></li>
 					</ul>
-				</nav>
+				</div>
 			</div>
 		</section>
 	</main>
 	
 	<footer class = 'main-footer'>
-		<h1 class = 'bot-logo'><a href = 'index.html'>DEVICE</a></h1>
+		<p class = 'bot-logo'><a href = 'index.html'>DEVICE</a></p>
 		<div class = 'user-navigation-bot'>
-			<span class = 'login-button'>Войти</span>
-			<p class = 'profile'><a href = 'profile.html'>#имя</a></p>
-			<span class = 'logout-button'>Выйти</span>
+			<p class = 'enter'><a href = 'enter.html'>Войти</a></p>
 			<p class = 'compare'><a href = 'compare.html'>Сравнить</a></p>
 			<p class = 'basket'><a href = 'basket.html'>Корзина</a></p>
 		</div>
 		<p class = 'addres'>г. Москва, ул. Строителей, 15</p>
-		<ul class = 'site-navigation-top'>
-			<li><a href = 'catalog.html'>Каталог товаров</a></li>
+		<ul class = 'site-navigation-bot'>
 			<li><a href = '#recieve'>Доставка</a></li>
 			<li><a href = '#guarantee'>Гарантия</a></li>
 			<li><a href = '#contacts'>Контакты</a></li>
@@ -136,13 +177,13 @@
 		<p class = 'phone'>Тел.:+7 (495) 495-95-95</p>
 		<div class = 'social'>
 			<ul>
-				<li><a class="social-button" href="#">Фейсбук</a></li>
-				<li><a class="social-button" href="#">Инстаграм</a></li>
-				<li><a class="social-button" href="#">Твиттер</a></li>
+				<li><a class = 'social-button' href = '#'>Фейсбук</a></li>
+				<li><a class = 'social-button' href = '#'>Инстаграм</a></li>
+				<li><a class = 'social-button' href = '#'>Твиттер</a></li>
 			</ul>
 		</div>
 		<div class = 'html-academy'>
-			<span class = 'button'></span>
+			<a href = 'https://htmlacademy.ru/intensive/htmlcss' target = '_blank'><img src = '#' alt = 'Интенсив HTML-Academy'></a>
 		</div>
 	</footer>
   </body>
