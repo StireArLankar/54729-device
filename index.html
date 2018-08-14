@@ -3,42 +3,44 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+	<link rel = 'stylesheet' href = 'css/style.css'>
   </head>
   <body>
+	<div class = 'wrapper'>
 	<header class = 'header'>
-		<p class = 'top-logo'><a>DEVICE</a></p>
+		<a class = 'top-logo'>DEVICE</a>
 		<div class = 'top-menu'>
 			<div class = 'user-navigation-top'>
-				<div>
+				
 					<form>
 						<input type = 'search' name = 'q' placeholder = 'Поиск по сайту' class = 'search-form'>
 						<input type = 'submit' class = 'search-button' value = 'Найти'>
 					</form>
-				</div>
+
+					<a href = '#'>Войти</a>
+					<a href = '#'>Сравнить</a>
+					<a href = '#'>Корзина</a>
 				
-				<div>
-					<p class = 'enter'><a href = 'enter.html'>Войти</a></p>
-					<p class = 'compare'><a href = 'compare.html'>Сравнить</a></p>
-					<p class = 'basket'><a href = 'basket.html'>Корзина</a></p>
-				</div>
 			</div>
 
 			<nav class = 'nav'>
 				<ul class = 'site-navigation-top'>
 					<li>
-						<a href = 'catalog.html'>Каталог товаров</a>
-						<ul class = 'catalog-menu'>
-							<li><a href = 'catalog/VR.html'>Виртуальная реальность</a></li>
-							<li><a href = 'catalog/selfy_monopod.html'>Моноподы для селфи</a></li>
-							<li><a href = 'catalog/action_camera.html'>Экшн-камеры</a></li>
-						</ul>
-						<ul class = 'catalog-menu'>
-							<li><a href = 'catalog/fitness_bracelet.html'>Фитнес-браслеты</a></li>
-							<li><a href = 'catalog/smart_watch.html'>Умные часы</a></li>
-						</ul>
-						<ul class = 'catalog-menu'>
-							<li><a href = 'catalog/copter.html'>Квадрокоптеры</a></li>
-						</ul>
+						<a class = 'catalog-menu-parent' href = '#'>Каталог товаров</a>
+						<div class = 'hover-catalog'>
+							<ul class = 'catalog-menu'>
+								<li><a href = '#'>Виртуальная реальность</a></li>
+								<li><a href = '#'>Моноподы для селфи</a></li>
+								<li><a href = '#'>Экшн-камеры</a></li>
+							</ul>
+							<ul class = 'catalog-menu'>
+								<li><a href = '#'>Фитнес-браслеты</a></li>
+								<li><a href = '#'>Умные часы</a></li>
+							</ul>
+							<ul class = 'catalog-menu'>
+								<li><a href = '#'>Квадрокоптеры</a></li>
+							</ul>
+						</div>
 					</li>
 					<li><a href = '#recieve'>Доставка</a></li>
 					<li><a href = '#guarantee'>Гарантия</a></li>
@@ -47,51 +49,37 @@
 			</nav>
 		</div>
 	</header>
+	</div>
 
 	<main>
 	<h1 class = 'hidden'>Магазин DEVICE</h1>
-		<section class = 'slide'>
-			<div class = 'slide-first'>
-				<div class = 'slider slide-img'>
-					<img src = '/img/monopod1.jpg' width = '200' height = '200' alt = 'Монопод 1'>
-					<img src = '/img/watch1.jpg' width = '200' height = '200' alt = 'Часы 1'>
-					<img src = '/img/copter1.jpg' width = '200' height = '200' alt = 'Коптер 1'>
-				</div>
+		<section class = 'slide wrapper'>
+			<input type = 'radio' id = 'slide-1' name = 'slide_button' checked>
+			<input type = 'radio' id = 'slide-2' name = 'slide_button'>
+			<input type = 'radio' id = 'slide-3' name = 'slide_button'>
+			
+			<div class = 'slide-wrapper-out'>
+			<div class = 'slide-wrapper-in'>
+				<div class = 'slide-content'>
+					<div class = 'slider slide-img'>
+						<img src = 'img/monopod1.png' width = '384' height = '486' alt = 'Монопод 1'>
+					</div>
 
-				<div class = 'slider slide-about'>
-					<div>
-						<b class = 'tagline'>Делай селфи, как Бен Стиллер!</b>
-						<p>Самая длинная палка для селфи доступная в нашем магазине<br>Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+					<div class = 'slider slide-about'>
+						<b class = 'tagline'>Делай селфи, <br>как Бен Стиллер!</b>
+						<p>Самая длинная палка для селфи доступная в нашем магазине<br>Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>	
 					</div>
-					<div>
-						<b class = 'tagline'>Худеем правильно!</b>
-						<p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
-					</div>
-					<div>
-						<b class = 'tagline'>Порхает как бабочка, жалит как пчела!</b>
-						<p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру</p>
-					</div>
-				</div>
 					
-				<div class = 'slider slide-more'>
-					<p class = 'interactive'><a href = 'monopod1.html'>Подробнее</a></p>
-					<p class = 'interactive'><a href = '#.html'>Подробнее</a></p>
-					<p class = 'interactive'><a href = '#.html'>Подробнее</a></p>
-				</div>
-				
-				<div class = 'slider-controls'>
-					<input type = 'radio' id = 'slide-1' name = 'slide_button' checked>
-					<input type = 'radio' id = 'slide-2' name = 'slide_button'>
-					<input type = 'radio' id = 'slide-3' name = 'slide_button'>
+					<div class = 'row-1'>
+						<a href = '#.html' class = 'interactive'>Подробнее</a>
 							
-					<div>
-						<label for = 'slide-1'></label>
-						<label for = 'slide-2'></label>
-						<label for = 'slide-3'></label>
+						<div class = 'slide-control'>
+							<label for = 'slide-1'></label>
+							<label for = 'slide-2'></label>
+							<label for = 'slide-3'></label>
+						</div>
 					</div>
-				</div>
-				
-				<div class = 'slider slider-table'>
+
 					<table>
 						<tr>
 							<th>Длина палки</th>
@@ -104,6 +92,29 @@
 							<td>Карбон</td>
 						</tr>
 					</table>
+
+				</div>
+
+			
+				<div class = 'slide-content'>
+					<div class = 'slider slide-img'>
+						<img src = 'img/watch1.png' width = '345' height = '485' alt = 'Часы 1'>
+					</div>
+
+					<div class = 'slider slide-about'>
+						<b class = 'tagline'>Худеем <br>правильно!</b>
+						<p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
+					</div>
+					
+					<div class = 'row-1'>
+						<a href = '#.html' class = 'interactive'>Подробнее</a>
+							
+						<div class = 'slide-control'>
+							<label for = 'slide-1'></label>
+							<label for = 'slide-2'></label>
+							<label for = 'slide-3'></label>
+						</div>
+					</div>
 					
 					<table>
 						<tr>
@@ -113,7 +124,29 @@
 							<td>48 часов</td>
 						</tr>
 					</table>
+				</div>
+
+			
+				<div class = 'slide-content'>
+					<div class = 'slider slide-img'>
+						<img src = 'img/copter1.png' width = '526' height = '334' alt = 'Коптер 1'>
+					</div>
+
+					<div class = 'slider slide-about'>
+						<b class = 'tagline'>Порхает как бабочка, жалит как пчела!</b>
+						<p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру</p>
+					</div>
 					
+					<div class = 'row-1'>
+						<a href = '#.html' class = 'interactive'>Подробнее</a>
+							
+						<div class = 'slide-control'>
+							<label for = 'slide-1'></label>
+							<label for = 'slide-2'></label>
+							<label for = 'slide-3'></label>
+						</div>
+					</div>
+
 					<table>
 						<tr>
 							<th>Дальность полета</th>
@@ -126,55 +159,107 @@
 					</table>
 				</div>
 			</div>
+			</div>
 		</section>
 
-		<section class = 'popular'>
+		<section class = 'popular wrapper'>
 			<ul>
-				<li><a href = 'catalog/VR.html'>Виртуальная реальность</a></li>
-				<li><a href = 'catalog/selfy_monopod.html'>Моноподы для селфи</a></li>
-				<li><a href = 'catalog/action_camera.html'>Экшн-камеры</a></li>
-				<li><a href = 'catalog/fitness_bracelet.html'>Фитнес-браслеты</a></li>
-				<li><a href = 'catalog/smart_watch.html'>Умные часы</a></li>
-				<li><a href = 'catalog/copter.html'>Квадрокоптеры</a></li>
+				<li><a href = '#'>
+					<figure>
+						<div>
+							<img src = 'img/popular-1.svg' width = '100px' height = '100px'>
+						</div>
+						<figcaption>Виртуальная реальность</figcaption>
+					</figure>
+				</a></li>
+				
+				<li><a href = '#'>
+					<figure>
+						<div>
+							<img src = 'img/popular-2.svg' width = '100px' height = '100px'>
+						</div>
+						<figcaption>Моноподы <br> для селфи</figcaption>
+					</figure>
+				</a></li>
+				
+				<li><a href = '#'>
+					<figure>
+						<div>
+							<img src = 'img/popular-3.svg' width = '100px' height = '100px'>
+						</div>
+						<figcaption>Экшн-камеры</figcaption>
+					</figure>
+				</a></li>
+				
+				<li><a href = '#'>
+					<figure>
+						<div>
+							<img src = 'img/popular-4.svg' width = '100px' height = '100px'>
+						</div>
+						<figcaption>Фитнес-браслеты</figcaption>
+					</figure>
+				</a></li>
+				
+				<li><a href = '#'>
+					<figure>
+						<div>
+							<img src = 'img/popular-5.svg' width = '100px' height = '100px'>
+						</div>
+						<figcaption>Умные часы</figcaption>
+					</figure>
+				</a></li>
+				
+				<li><a href = '#'>
+					<figure>
+						<div>
+							<img src = 'img/popular-6.svg' width = '100px' height = '100px'>
+						</div>
+						<figcaption>Квадрокоптеры</figcaption>
+					</figure>
+				</a></li>
 			</ul>
 		</section>
 
 		<section class = 'service'>
-			<div class = 'service-menu'>
-				<input type = 'radio' id = 'recieve' name = 'service_button' checked>
-				<input type = 'radio' id = 'guarantee' name = 'service_button' >
-				<input type = 'radio' id = 'credit' name = 'service_button'>
+		<div class = 'wrapper'>
+			<input type = 'radio' id = 'recieve' name = 'service_button' checked>
+			<input type = 'radio' id = 'guarantee' name = 'service_button' >
+			<input type = 'radio' id = 'credit' name = 'service_button'>
 							
-				<div class = 'service-menu-control'>
-					<label for = 'recieve'>Доставка</label>
-					<label for = 'guarantee'>Гарантия</label>
-					<label for = 'credit'>Кредит</label>
-				</div>
+			<div class = 'service-menu-control'>
+				<label for = 'recieve' class = 'interactive'>Доставка</label>
+				<label for = 'guarantee' class = 'interactive'>Гарантия</label>
+				<label for = 'credit' class = 'interactive'>Кредит</label>
 			</div>
 
-			<div class = 'service-content'>
-				<div class = 'service-recieve'>
+			<div class = 'service-wrapper-out'>
+			<div class = 'service-wrapper-in'>
+				<div class = 'service-content'>
 					<h2>Доставка</h2>
 					<p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
 				</div>
-				<div class = 'service-guarantee'>
+				<div class = 'service-content'>
 					<h2>Гарантия</h2>
-					<p>МЕсли из-за возгорания купленного у нас товара у вас сгорит дом - не переживайте, мы выдадим вам новый.<br>Товар, не дом конечно же.</p>
+					<p>Если из-за возгорания купленного у нас товара у вас сгорит дом - не переживайте, мы выдадим вам новый.<br>Товар, не дом конечно же.</p>
 				</div>
-				<div class = 'service-credit'>
+				<div class = 'service-content'>
 					<h2>Кредит</h2>
 					<p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
 				</div>
 			</div>
+			</div>
+		</div>
 		</section>
 
-		<section class = 'sponsors'>
+		<section class = 'sponsors wrapper'>
 			<ul>
 				<li>
 					<a href = '#'>
+					<!---
 						<p>
 							<img src = 'img/logo-1-hover.jpg' width = '260' height = '100' alt = ''>
 						</p>
+					--->
 						<p>
 							<img src = 'img/logo-1.jpg' width = '260' height = '100' alt = ''>
 						</p>
@@ -182,9 +267,7 @@
 				</li>
 				<li>
 					<a href = '#'>
-						<p>
-							<img src = 'img/logo-2-hover.jpg' width = '260' height = '100' alt = ''>
-						</p>
+
 						<p>
 							<img src = 'img/logo-2.jpg' width = '260' height = '100' alt = ''>
 						</p>
@@ -193,18 +276,12 @@
 				<li>
 					<a href = '#'>
 						<p>
-							<img src = 'img/logo-3-hover.jpg' width = '260' height = '100' alt = ''>
-						</p>
-						<p>
 							<img src = 'img/logo-3.jpg' width = '260' height = '100' alt = ''>
 						</p>
 					</a>
 				</li>
 				<li>
 					<a href = '#'>
-						<p>
-							<img src = 'img/logo-4-hover.jpg' width = '260' height = '100' alt = ''>
-						</p>
 						<p>
 							<img src = 'img/logo-4.jpg' width = '260' height = '100' alt = ''>
 						</p>
@@ -213,52 +290,66 @@
 			</ul>
 		</section>
 
-		<section class = 'about-us'>
-			<h2>О нас</h2>
-			<p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.<p>
-			<p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями.</p>
-			<ul class = 'transport-comp'>
-				<li>Деловые Линии</li>
-				<li>Автотрейдинг</li>
-				<li>ЖелДорЭкспедиция</li>
-			</ul>
-			<p class = 'interactive more-about-us'><a href = 'about_us.html'>Подробнее о нас</a></p>
-		</section>
+		<section class = 'more-info wrapper'>
+			<section class = 'about-us'>
+				<h2>О нас</h2>
+				<p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.<p>
+				<p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями.</p>
+				<ul class = 'transport-comp'>
+					<li>Деловые Линии</li>
+					<li>Автотрейдинг</li>
+					<li>ЖелДорЭкспедиция</li>
+				</ul>
+				<a href = '#' class = 'interactive'>Подробнее о нас</a>
+			</section>
 
-		<section class = 'contacts' id = 'contacts'>
-			<h2>Контакты</h2>
-			<p>Вы можете забрать товар сами, заехав в наш офис. Заодно вы сможете проверить работоспособность покупки. Всякое бывает.<p>
-			<div class = 'map-poppup'>
-				<img src = 'yandex.karti/bbb' height = '200' width = '200' alt = 'Как проехать'>
-			</div>
-			<p class = 'interactive write'><a href = '#'>Напишите нам</a></p>
+			<section class = 'contacts' id = 'contacts'>
+				<h2>Контакты</h2>
+				<p>Вы можете забрать товар сами, заехав в наш офис. Заодно вы сможете проверить работоспособность покупки. Всякое бывает.<p>
+				<div class = 'map-poppup'>
+					<img src = 'yandex.karti/bbb' height = '200' width = '200' alt = 'Как проехать'>
+				</div>
+				<a href = '#' class = 'interactive'>Напишите нам</a>
+			</section>
 		</section>
 	</main>
 
 	<footer class = 'footer'>
-		<p class = 'bot-logo'><a>DEVICE</a></p>
+	<div class = 'wrapper'>
 		<div class = 'user-navigation-bot'>
-			<p class = 'enter'><a href = 'enter.html'>Войти</a></p>
-			<p class = 'compare'><a href = 'compare.html'>Сравнить</a></p>
-			<p class = 'basket'><a href = 'basket.html'>Корзина</a></p>
+			<a class = 'bot-logo'>DEVICE</a>
+			<a href = '#'>Войти</a>
+			<a href = '#'>Сравнить</a>
+			<a href = '#'>Корзина</a>
 		</div>
-		<p class = 'addres'>г. Москва, ул. Строителей, 15</p>
-		<ul class = 'site-navigation-bot'>
-			<li><a href = '#recieve'>Доставка</a></li>
-			<li><a href = '#guarantee'>Гарантия</a></li>
-			<li><a href = '#contacts'>Контакты</a></li>
-		</ul>
-		<p class = 'phone'>Тел.:+7 (495) 495-95-95</p>
-		<div class = 'social'>
-			<ul>
-				<li><a class = 'social-button' href = '#'>Фейсбук</a></li>
-				<li><a class = 'social-button' href = '#'>Инстаграм</a></li>
-				<li><a class = 'social-button' href = '#'>Твиттер</a></li>
+		
+		<div class = 'footer-second-row'>
+			<p class = 'addres'>г. Москва, ул. Строителей, 15</p>
+			
+			<ul class = 'site-navigation-bot'>
+				<li><a href = '#recieve'>Доставка</a></li>
+				<li><a href = '#guarantee'>Гарантия</a></li>
+				<li><a href = '#contacts'>Контакты</a></li>
 			</ul>
+		
+			<p class = 'phone'>Тел.:+7 (495) 495-95-95</p>
 		</div>
-		<div class = 'html-academy'>
-			<a href = 'https://htmlacademy.ru/intensive/htmlcss' target = '_blank'><img src = '#' alt = 'Интенсив HTML-Academy'></a>
+		
+		<div class = 'footer-third-row'>
+			<div class = 'bar'>
+			</div>
+			<div class = 'social'>
+				<ul>
+					<li><a class = 'social-button' href = '#'>Фейсбук</a></li>
+					<li><a class = 'social-button' href = '#'>Инстаграм</a></li>
+					<li><a class = 'social-button' href = '#'>Твиттер</a></li>
+				</ul>
+			</div>
+			<div class = 'html-academy'>
+				<a href = 'https://htmlacademy.ru/intensive/htmlcss' target = '_blank'><img src = 'img/logo-html.svg' alt = 'Интенсив HTML-Academy'></a>
+			</div>
 		</div>
+	</div>
 	</footer>
 	
 	<section class = 'modal modal-map'>
@@ -269,15 +360,19 @@
 	<section class = 'modal write-us'>
 		<form action = 'asd' method = 'post'>
 			<div>
-				<label for = 'name-field'>Ваше имя:</label>
-				<input type = 'text' name = 'name' id = 'name-field' placeholder = 'Имя Фамилия'>
+				<div>
+					<p><label for = 'name-field'>Ваше имя:</label></p>
+					<input type = 'text' name = 'name' id = 'name-field' placeholder = 'Имя Фамилия' required>
+				</div>
+				<div>
+					<p><label for = 'mail-field'>Ваш e-mail:</label></p>
+					<input type = 'email' name = 'mail' id = 'mail-field' placeholder = 'email@example.com' required>
+				</div>
 			</div>
 			<div>
-				<label for = 'mail-field'>Ваш e-mail:</label>
-				<input type = 'text' name = 'mail' id = 'mail-field' placeholder = 'email@example.com'>
+				<p><label for = "comment-field">Текст письма:</label></p>
+				<textarea name = 'comment' id = 'comment-field' rows='5' placeholder = 'В свободной форме' required></textarea>
 			</div>
-			<label for = "comment-field">Текст письма:</label>
-			<textarea name = 'comment' id = 'comment-field' rows='5' placeholder = 'В свободной форме'></textarea>
 			<input type = 'submit' value = 'Отправить'>
 		</form>
 		<a href = '#' class = 'close'>x</a>
