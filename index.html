@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+	<link rel = 'stylesheet' href = 'css/normalize.css'>
 	<link rel = 'stylesheet' href = 'css/style.css'>
+	<link href = 'https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic' rel='stylesheet'>
   </head>
   <body>
 	<div class = 'wrapper'>
@@ -54,6 +56,7 @@
 	<main>
 	<h1 class = 'visually-hidden'>Магазин DEVICE</h1>
 		<section class = 'slide wrapper'>
+		
 			<input type = 'radio' id = 'slide-1' name = 'slide_button' class = 'slide_btn' checked>
 			<input type = 'radio' id = 'slide-2' name = 'slide_button' class = 'slide_btn'>
 			<input type = 'radio' id = 'slide-3' name = 'slide_button' class = 'slide_btn'>
@@ -164,6 +167,7 @@
 		</section>
 
 		<section class = 'popular wrapper'>
+		<h2 class = 'visually-hidden'>Популярные товары</h2>
 			<ul class = 'popular-list'>
 				<li class = 'popular-item'><a href = '#'>
 					<figure class = 'popular-img'>
@@ -222,6 +226,7 @@
 		</section>
 
 		<section class = 'service'>
+		<h2 class = 'visually-hidden'>Наши услуги</h2>
 		<div class = 'wrapper'>
 			<input type = 'radio' id = 'recieve' name = 'service_button' class = 'services-slide-btn' checked>
 			<input type = 'radio' id = 'guarantee' name = 'service_button' class = 'services-slide-btn'>
@@ -252,32 +257,33 @@
 		</div>
 		</section>
 
-		<section class = 'sponsors wrapper'>
-			<ul class = 'sponsors-list'>
-				<li class = 'sponsors-logo'>
-					<a href = '#' class = 'sponsors-link'>
+		<section class = 'brand wrapper'>
+		<h2 class = 'visually-hidden'>Брэнды</h2>
+			<ul class = 'brand-list'>
+				<li class = 'brand-logo'>
+					<a href = '#' class = 'brand-link'>
 						<img src = 'img/logo-1.jpg' width = '260' height = '100' alt = 'DJI'>
 					</a>
 				</li>
-				<li class = 'sponsors-logo'>
-					<a href = '#' class = 'sponsors-link'>
+				<li class = 'brand-logo'>
+					<a href = '#' class = 'brand-link'>
 						<img src = 'img/logo-2.jpg' width = '260' height = '100' alt = 'SP GADGETS'>
 					</a>
 				</li>
-				<li class = 'sponsors-logo'>
-					<a href = '#' class = 'sponsors-link'>
+				<li class = 'brand-logo'>
+					<a href = '#' class = 'brand-link'>
 						<img src = 'img/logo-3.jpg' width = '260' height = '100' alt = 'GoPro'>
 					</a>
 				</li>
-				<li class = 'sponsors-logo'>
-					<a href = '#' class = 'sponsors-link'>
+				<li class = 'brand-logo'>
+					<a href = '#' class = 'brand-link'>
 						<img src = 'img/logo-4.jpg' width = '260' height = '100' alt = 'Vive'>
 					</a>
 				</li>
 			</ul>
 		</section>
 
-		<section class = 'more-info wrapper'>
+		<div class = 'more-info wrapper'>
 			<section class = 'about-us'>
 				<h2>О нас</h2>
 				<p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.<p>
@@ -297,7 +303,7 @@
 				</div>
 				<a href = '#' class = 'interactive'>Напишите нам</a>
 			</section>
-		</section>
+		</div>
 	</main>
 
 	<footer class = 'footer'>

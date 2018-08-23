@@ -1,7 +1,43 @@
-body { margin: 0 }
-a { text-decoration: none }
-html { box-sizing: border-box; }
-*, *::before, *::after { box-sizing: inherit; }
+@font-face {
+    font-family: 'Gilroy';
+    src: url('fonts/gilroylight.eot');
+    src: local('Gilroy'), local('Gilroy'), 
+         url('fonts/gilroylight.eot?#iefix') format('embedded-opentype'),
+         url('fonts/gilroylight.woff') format('woff'),
+		 url('fonts/gilroylight.woff2') format('woff2'),
+         url('fonts/gilroylight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('fonts/gilroyextrabold.eot');
+    src: local('Gilroy Bold'), local('Gilroy-Bold'), 
+         url('fonts/gilroyextrabold.eot?#iefix') format('embedded-opentype'),
+         url('fonts/gilroyextrabold.woff') format('woff'),
+		 url('fonts/gilroyextrabold.woff2') format('woff2'),
+         url('fonts/gilroyextrabold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body { 
+	margin: 0;
+	padding: 0;
+}
+
+a { 
+	text-decoration: none; 
+}
+
+html { 
+	box-sizing: border-box; 
+}
+
+*, *::before, *::after { 
+	box-sizing: inherit; 
+}
 
 .wrapper {
 	width: 1200px;
@@ -240,13 +276,13 @@ button.search-button {
 
 .top-logo {
 	font-size: 48px;
-	font-family: "Gilroy";
+	font-family: "Gilroy", Arial, sans-serif;
 	font-weight: bold;
 }
 
 .user-navigation-top * {
 	font-size: 15px;
-	font-family: "Open Sans";
+	font-family: "Open Sans", Arial, sans-serif;
 	text-align: left;
 	letter-spacing: 0.01em;
 	color: black;
@@ -255,7 +291,7 @@ button.search-button {
 .site-navigation-top a {
 	letter-spacing: 0.01em;
 	font-size: 18px;
-	font-family: "Gilroy";
+	font-family: "Gilroy", Arial, sans-serif;
 	font-weight: bold;
 	text-transform: uppercase;
 	color: black;
@@ -265,7 +301,7 @@ button.search-button {
 .hover-catalog a {
 	letter-spacing: 0.01em;
 	font-size: 15px;
-	font-family: "Open Sans";
+	font-family: "Open Sans", Arial, sans-serif;
 	text-align: left;
 	text-transform: none;
 	font-weight: normal;
@@ -331,21 +367,36 @@ section.slide {
 .slide-control label {
     display: inline-block;
 	vertical-align: top;
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
     margin: 0 3px;
-    background-color: #cccccc;
-    border: 4px solid white;
+    background-color: ;
+    border: 2px solid white;
     border-radius: 50%;
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.8);
+    box-shadow: 0px 0px 0px 2px black;
     transition: background-color 0.2s;
     cursor: pointer;
+	position: relative;
 }
 
 .slide_btn:nth-child(1):checked ~ .slide-wrapper-out label[for="slide-1"],
 .slide_btn:nth-child(2):checked ~ .slide-wrapper-out label[for="slide-2"],
 .slide_btn:nth-child(3):checked ~ .slide-wrapper-out label[for="slide-3"] {
-    background-color: #666666;
+    background-color: black;
+}
+
+.slide_btn:nth-child(1):checked ~ .slide-wrapper-out label[for="slide-1"]::after,
+.slide_btn:nth-child(2):checked ~ .slide-wrapper-out label[for="slide-2"]::after,
+.slide_btn:nth-child(3):checked ~ .slide-wrapper-out label[for="slide-3"]::after {
+	content: '';
+	position: absolute;
+	width: 3px;
+	height: 3px;
+    background-color: white;
+	border-radius: 50%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .slide_btn:nth-child(1):checked ~ .slide-wrapper-out .slide-wrapper-in {
@@ -390,7 +441,7 @@ section.slide {
 
 .slide-content::after {
 	font-size: 180px;
-	font-family: "Gilroy";
+	font-family: "Gilroy", Arial, sans-serif;
 	font-weight: bold;
 	text-align: right;
 	letter-spacing: 0.01em;
@@ -453,7 +504,7 @@ section.slide {
 
 .slide-about .tagline {
 	font-size: 47px;
-	font-family: "Gilroy";
+	font-family: "Gilroy", Arial, sans-serif;
 	font-weight: bold;
 	text-align: left;
 	letter-spacing: 0.01em;
@@ -462,7 +513,7 @@ section.slide {
 
 .slide-about p {
 	font-size: 15px;
-	font-family: "Open Sans";
+	font-family: "Open Sans", Arial, sans-serif;
 	color: #a0a0a0;
 	line-height: 2;
 	text-align: left;
@@ -471,16 +522,17 @@ section.slide {
 
 .slide-content td {
 	font-size: 36px;
-	font-family: "Gilroy";
+	font-family: "Gilroy", Arial, sans-serif;
 	text-align: left;
 }
 
 .slide-content th{
 	font-size: 13px;
-	font-family: "Open Sans";
-	color: #a0a0a0;
+	font-family: "Open Sans", Arial, sans-serif;
+	color: black;
 	line-height: 1.5;
 	text-align: left;
+	font-weight: normal;
 }
 
 .popular-list {
@@ -510,7 +562,7 @@ section.slide {
 
 .popular-img-caption {
 	font-size: 18px;
-	font-family: "Gilroy";
+	font-family: "Gilroy", Arial, sans-serif;
 	font-weight: bold;
 	text-align: left;
 	letter-spacing: 0.01em;
@@ -530,17 +582,18 @@ section.slide {
 
 .service {
 	position: relative;
+	background-color: #e5e5e5;
 }
 
 .service::before {
 	content: '';
 	position: absolute;
-	background-color: #e5e5e5;
-	height: 70%;
+	background-color: white;
+	height: 120px;
 	width: 100%;
-	bottom: 0;
+	top: 0;
 	left: 0;
-	z-index: -1;
+	z-index: 0;
 }
 
 .service .wrapper {
@@ -569,7 +622,7 @@ section.slide {
 .services-slide-btn:nth-child(2):checked ~ .service-menu-control .interactive:nth-child(2),
 .services-slide-btn:nth-child(3):checked ~ .service-menu-control .interactive:nth-child(3){
     width: 100%;
-	padding-right: 132px;
+	padding-right: 125px;
 	color: #f7e184;
 }
 
@@ -600,6 +653,7 @@ section.slide {
 	margin-top: 80px;
 	margin-bottom: 72px;
 	border-right: 7px solid rgba(0, 0, 0, 1.00);
+	z-index: 2;
 }
 
 .service-menu-control label {
@@ -621,7 +675,7 @@ section.slide {
 .service-content h2 {
 	margin-top: 89px;
 	font-size: 47px;
-	font-family: "Gilroy";
+	font-family: "Gilroy", Arial, sans-serif;
 	font-weight: bold;
 	margin-bottom: 25px;
 }
@@ -630,7 +684,7 @@ section.slide {
 	margin-bottom: 70px;
 	margin-top: 0px;
 	font-size: 15px;
-	font-family: "Open Sans";
+	font-family: "Open Sans", Arial, sans-serif;
 	color: #a0a0a0;
 	line-height: 2;
 	max-width: 440px;
@@ -672,7 +726,7 @@ section.slide {
 	top: 80px;
 }
 
-.sponsors-list {
+.brand-list {
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
@@ -682,7 +736,7 @@ section.slide {
 	margin-bottom: 93px;
 }
 
-.sponsors-link:not(:hover) img{
+.brand-link:not(:hover) img{
 	 /* Firefox 10+, Firefox on Android */
 	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'saturate\' values=\'0\'/></filter></svg>#grayscale");
 	
@@ -694,6 +748,7 @@ section.slide {
 	-webkit-filter: grayscale(100%);
 	opacity: 0.2;
     filter: alpha(opacity=20); /* For IE8 and earlier */
+	
 }
 
 .more-info {
@@ -708,7 +763,7 @@ section.slide {
 
 .more-info h2 {
 	font-size: 47px;
-	font-family: "Gilroy";
+	font-family: "Gilroy", Arial, sans-serif;
 	font-weight: bold;
 }
 
@@ -740,7 +795,7 @@ section.slide {
 
 .about-us p {
 	font-size: 15px;
-	font-family: "Open Sans";
+	font-family: "Open Sans", Arial, sans-serif;
 	color: #a0a0a0;
 	line-height: 2;
 	max-width: 493px;
@@ -748,7 +803,7 @@ section.slide {
 
 .contacts p {
 	font-size: 15px;
-	font-family: "Open Sans";
+	font-family: "Open Sans", Arial, sans-serif;
 	color: #a0a0a0;
 	line-height: 2;
 	max-width: 550px;
@@ -758,7 +813,7 @@ section.slide {
 	list-style: disc outside none;
 	font-size: 16px;
 	line-height: 2.5;
-	font-family: "Gilroy";
+	font-family: "Gilroy", Arial, sans-serif;
 	font-weight: bold;
 	margin-left: 35px;
 }
@@ -798,7 +853,6 @@ section.slide {
 
 .user-navigation-bot {
 	display: flex;
-	justify-content: flex-end;
 	align-items: flex-start;
 }
 
@@ -817,6 +871,10 @@ section.slide {
 	position: absolute;
 	-webkit-mask: url('../img/user.svg') no-repeat 100% 100%;
 	mask: url('../img/user.svg') no-repeat 100% 100%;
+	/*background-image: url('data:image/svg+xml;utf8,<svg ...><g stroke="red" ... /></g></svg>');*/
+	clip-path: url('../img/user.svg');
+	mask-image: url('../img/user.svg');
+	-webkit-mask-image: url('../img/user.svg');
 	background-color: #ffc600;
 	height: 12px;
 	width: 12px;
@@ -883,7 +941,7 @@ section.slide {
 .footer-second-row p{
 	color: white;
 	font-size: 15px;
-	font-family: "Open Sans";
+	font-family: "Open Sans", Arial, sans-serif;
 }
 
 .site-navigation-bot {
@@ -896,7 +954,7 @@ section.slide {
 }
 .site-navigation-bot a{
 	font-size: 18px;
-	font-family: "Gilroy";
+	font-family: "Gilroy", Arial, sans-serif;
 	color: white;
 	font-weight: bold;
 	text-transform: uppercase;
@@ -946,7 +1004,7 @@ li:nth-child(1) .social-button{
 li:nth-child(1) .social-button::before {
 	background-image: url('../img/fb.svg');
 	background-position: center center;
-	margin: 0 12px;
+
 	position: absolute;
 	content: '';
 	width: 32px;
@@ -957,7 +1015,7 @@ li:nth-child(1) .social-button::before {
 li:nth-child(2) .social-button::before {
 	background-image: url('../img/instagram.svg');
 	background-position: center center;
-	margin: 0 12px;
+
 	position: absolute;
 	content: '';
 	width: 32px;
@@ -969,7 +1027,7 @@ li:nth-child(3) .social-button::before {
 	background-image: url('../img/twitter.svg');
 	background-position: center center;
 	position: absolute;
-	margin: 0 12px;
+
 	content: '';
 	width: 32px;
 	height: 32px;
@@ -990,7 +1048,7 @@ li:nth-child(3) .social-button::before {
 
 a.bot-logo {
 	font-size: 48px;
-	font-family: "Gilroy";
+	font-family: "Gilroy", Arial, sans-serif;
 	font-weight: bold;
 	color: #ffc600;
 }
@@ -1002,7 +1060,7 @@ a.bot-logo {
 	display: inline-block;
 	vertical-align: top;
 	font-size: 18px;
-	font-family: "Gilroy";
+	font-family: "Gilroy", Arial, sans-serif;
 	font-weight: bold;
 	text-align: center;
 	letter-spacing: 0.2em;
@@ -1087,7 +1145,7 @@ a.bot-logo {
 
 .write-us label {
 	font-size: 18px;
-	font-family: "Gilroy";
+	font-family: "Gilroy", Arial, sans-serif;
 	font-weight: bold;
 }
 
@@ -1098,7 +1156,7 @@ a.bot-logo {
 	flex-grow: 1;
 	padding: 20px;
 	font-size: 14px;
-	font-family: "Open Sans";
+	font-family: "Open Sans", Arial, sans-serif;
 }
 
 .write-us textarea {
@@ -1148,7 +1206,7 @@ a.bot-logo {
 
 .catalog-name {
 	font-size: 47px;
-	font-family: "Gilroy";
+	font-family: "Gilroy", Arial, sans-serif;
 	font-weight: bold;
 	margin-bottom: 35px;
 	margin-top: 100px;
@@ -1188,7 +1246,7 @@ a.bot-logo {
 
 .breadcrumbs a {
 	font-size: 14px;
-	font-family: "Open Sans";
+	font-family: "Open Sans", Arial, sans-serif;
 	color: black;
 	letter-spacing: 0.01em;
 	opacity: 0.3;
@@ -1215,6 +1273,7 @@ a.bot-logo {
 	margin-top: 0px;
 	padding-top: 20px;
 	padding-left: 60px;
+	padding-right: 70px;
 }
 
 .sort-name {
@@ -1223,7 +1282,7 @@ a.bot-logo {
 	margin-bottom: 0px;
 	margin-top: 0px;
 	font-size: 16px;
-	font-family: "Gilroy";
+	font-family: "Gilroy", Arial, sans-serif;
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.2em;
@@ -1257,7 +1316,7 @@ a.bot-logo {
 
 .sort-options-list a {
 	font-size: 14px;
-	font-family: "Open Sans";
+	font-family: "Open Sans", Arial, sans-serif;
 	color: black;
 	opacity: 0.3;
 }
@@ -1283,18 +1342,26 @@ a.bot-logo {
 	position: relative;
 }
 
-.sort-option:nth-last-child(1) a{
-	background-image: url('../img/icon-down-dir.svg');
-	background-repeat: no-repeat;
-	width: 11px;
-	height: 11px;
+.sort-option:nth-last-child(1) a::before{
+	content: "";
+    display: inline-block;
+    border: 12px solid black;
+    border-right-width: 6px;
+    border-left-width: 6px;
+    border-right-color: transparent;
+    border-left-color: transparent;
+	border-bottom-width: 0;
 }
 
-.sort-option:nth-last-child(2) a{
-	background-image: url('../img/icon-up-dir.svg');
-	background-repeat: no-repeat;
-	width: 11px;
-	height: 11px;
+.sort-option:nth-last-child(2) a::before{
+	content: "";
+    display: inline-block;
+    border: 12px solid black;
+    border-right-width: 6px;
+    border-left-width: 6px;
+    border-right-color: transparent;
+    border-left-color: transparent;
+	border-top-width: 0;
 }
 
 .background-left-top {
@@ -1317,7 +1384,7 @@ a.bot-logo {
 	padding-left: 60px;
 	padding-right: 70px;
 	font-size: 14px;
-	font-family: "Open Sans";
+	font-family: "Open Sans", Arial, sans-serif;
 	letter-spacing: 0.01;
 }
 
@@ -1394,7 +1461,7 @@ fieldset.price {
 
 .goods-menu-caption a {
 	font-size: 18px;
-	font-family: "Gilroy";
+	font-family: "Gilroy", Arial, sans-serif;
 	color: rgb(0, 0, 0);
 	font-weight: bold;
 	letter-spacing: 0.01em;
@@ -1422,7 +1489,7 @@ fieldset.price {
 	border: 2px solid black;
 	opacity: 0.2;
 	font-size: 14px;
-	font-family: "Gilroy";
+	font-family: "Gilroy", Arial, sans-serif;
 	letter-spacing: 0.05em;
 	font-weight: bold;
 }
@@ -1470,7 +1537,7 @@ fieldset.price {
 	border: 0;
 	background: 0;
 	font-size: 13px;
-	font-family: "Open Sans";
+	font-family: "Open Sans", Arial, sans-serif;
 	letter-spacing: 0.01;
 	opacity: 0.5;
 }
@@ -1486,7 +1553,7 @@ fieldset.price {
 
 .price-value {
 	font-size: 16px;
-	font-family: "Gilroy";
+	font-family: "Gilroy", Arial, sans-serif;
 	color: rgb(70, 70, 70);
 	text-align: right;
 }
@@ -1511,7 +1578,7 @@ fieldset.price {
 	flex-flow: column;
 	justify-content: center;
 	font-size: 16px;
-	font-family: "Gilroy";
+	font-family: "Gilroy", Arial, sans-serif;
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.2em;
@@ -1567,7 +1634,7 @@ fieldset.price {
 
 .filter h3 {
 	font-size: 16px;
-	font-family: "Gilroy";
+	font-family: "Gilroy", Arial, sans-serif;
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.2em;
@@ -1575,10 +1642,145 @@ fieldset.price {
 
 .filter h4 {
 	font-size: 18px;
-	font-family: "Gilroy";
+	font-family: "Gilroy", Arial, sans-serif;
 	font-weight: bold;
 	letter-spacing: 0.01em;
 	margin-top: 16px;
-	margin-bottom: 30px;
+	margin-bottom: 15px;
 }
 
+input[type = 'range'] {
+	display: none;
+}
+
+.form-radio {
+	position: absolute;
+	left: -50px;
+}
+
+.form-radio-label {
+	position: relative;
+	cursor: pointer;  
+	padding-left: 40px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.form-radio-label::before{
+    position: absolute;
+	content: '';
+	border: 4px solid black;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;    
+    margin: 0;
+	left: 5px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.bluetooth-list li {
+	margin-top: 10px;
+}
+
+.form-radio-label:hover::after, 
+.form-radio-label:hover::before {
+	opacity: 0.6;
+}
+
+.form-radio-label:active::after, 
+.form-radio-label:active::before {
+	opacity: 1;
+}
+
+.form-radio:checked + .form-radio-label::after,
+.form-radio-label:active::after  {
+	position: absolute;
+	content: '';
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: black;
+	top: 50%;
+	left: 12px;
+	transform: translateY(-50%);
+}
+
+.form-radio:checked + .form-radio-label:hover::after, 
+.form-radio:checked + .form-radio-label:hover::before {
+	opacity: 0.6;
+}
+
+.form-radio:checked + .form-radio-label:active::after {
+	width: 0;
+	height: 0;
+}
+
+.form-radio:checked + .form-radio-label:active {
+	opacity: 1;
+}
+
+.form-radio:disabled  + .form-radio-label{
+	opacity: 0.25;
+}
+
+.form-checkbox {
+	position: absolute;
+	left: -50px;
+}
+
+.form-checkbox-label {
+	position: relative;
+	cursor: pointer;  
+	padding-left: 40px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.color-list li {
+	margin-top: 10px;
+}
+
+.form-checkbox-label::before{
+    position: absolute;
+	content: '';
+	border: 2px solid black;
+    height: 24px;
+    width: 24px;
+    border-radius: 4px;    
+    margin: 0;
+	left: 5px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.form-checkbox:checked + .form-checkbox-label::after,
+.form-checkbox-label:active::after {
+    position: absolute;
+    font-size: 25px;
+	font-family: "Gilroy", Arial, sans-serif;
+	font-weight: bold;
+    left: 14px;
+    top: -8px;
+    content: '\02143';
+    transform: rotate(40deg);
+}
+
+.form-checkbox:checked + .form-checkbox-label:active::after {
+	content: '';
+}
+
+.form-checkbox:checked + .form-checkbox-label:hover::after,
+.form-checkbox:checked + .form-checkbox-label:hover::before  {
+	opacity: 0.6;
+}
+
+.form-checkbox-label:hover::after,
+.form-checkbox-label:hover::before  {
+	opacity: 0.6;
+}
+
+.form-checkbox-label:active::after,
+.form-checkbox-label:active::before  {
+	opacity: 1;
+}
