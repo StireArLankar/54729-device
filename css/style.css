@@ -25,6 +25,13 @@
 body { 
 	margin: 0;
 	padding: 0;
+	
+	font-size: 15px;
+	font-family: "Open Sans", Arial, sans-serif;
+	text-align: left;
+	letter-spacing: 0.01em; 
+	line-height: 1.2;
+	color: black;
 }
 
 a { 
@@ -237,7 +244,7 @@ button.search-button {
 	position: relative;
 	min-width: 240px;
 	display: inline-block;
-	vertical-align: top;
+	vertical-align: middle;
 }
 
 .catalog-menu-parent::before{
@@ -278,6 +285,8 @@ button.search-button {
 	font-size: 48px;
 	font-family: "Gilroy", Arial, sans-serif;
 	font-weight: bold;
+	line-height: 48px;
+	letter-spacing: 0.01em;
 }
 
 .user-navigation-top * {
@@ -285,15 +294,16 @@ button.search-button {
 	font-family: "Open Sans", Arial, sans-serif;
 	text-align: left;
 	letter-spacing: 0.01em;
+	line-height: 30px;
 	color: black;
 }
 
 .site-navigation-top a {
-	letter-spacing: 0.01em;
 	font-size: 18px;
 	font-family: "Gilroy", Arial, sans-serif;
 	font-weight: bold;
 	text-transform: uppercase;
+	line-height: 24px;
 	color: black;
 	letter-spacing: 0.2em;
 }
@@ -305,14 +315,15 @@ button.search-button {
 	text-align: left;
 	text-transform: none;
 	font-weight: normal;
+	line-height: 36px;
 }
 
 .catalog-menu li {
-	margin-top: 21px;
+	margin-top: 0px;
 }
 
 .catalog-menu li:first-child {
-	margin-top: 40px;
+	margin-top: 30px;
 }
 
 .header a:hover {
@@ -342,15 +353,17 @@ section.slide {
 .slide-wrapper-out{
 	overflow: hidden;
 	min-height: 500px;
+	position: relative;
 }
 
 .slide-wrapper-in {
 	width: 300%;
     transition: transform 0s ease;
+	display: flex;
 }
 
 .slide-content {
-	float: left; 
+	flex-grow: 1;
 	width: 1160px;
 }
 
@@ -362,11 +375,14 @@ section.slide {
 	display: flex;
 	justify-content: space-between;
 	width: 80px;
+	position: absolute;
+	bottom: 130px;
+	right: 150px;
 }
 
 .slide-control label {
     display: inline-block;
-	vertical-align: top;
+	vertical-align: middle;
     width: 12px;
     height: 12px;
     margin: 0 3px;
@@ -377,6 +393,7 @@ section.slide {
     transition: background-color 0.2s;
     cursor: pointer;
 	position: relative;
+	z-index: 2;
 }
 
 .slide_btn:nth-child(1):checked ~ .slide-wrapper-out label[for="slide-1"],
@@ -473,16 +490,10 @@ section.slide {
 	margin-right: auto;
 	display: block;
 }
-	
-.slider-options {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin-right: 60px;
-}
 
-.slider-options .interactive {
+.slider .interactive {
 	width: 220px;
+	align-self: flex-start;
 }
 
 .slider-table { 
@@ -509,13 +520,14 @@ section.slide {
 	text-align: left;
 	letter-spacing: 0.01em;
 	margin-top: 67px;
+	line-height: 56px;
 }
 
 .slide-about p {
 	font-size: 15px;
 	font-family: "Open Sans", Arial, sans-serif;
 	color: #a0a0a0;
-	line-height: 2;
+	line-height: 30px;
 	text-align: left;
 	letter-spacing: 0.01em;
 }
@@ -524,15 +536,18 @@ section.slide {
 	font-size: 36px;
 	font-family: "Gilroy", Arial, sans-serif;
 	text-align: left;
+	letter-spacing: 0.01em;
+	line-height: 48px;
 }
 
 .slide-content th{
 	font-size: 13px;
 	font-family: "Open Sans", Arial, sans-serif;
 	color: black;
-	line-height: 1.5;
+	line-height: 20px;
 	text-align: left;
 	font-weight: normal;
+	letter-spacing: 0.01em;
 }
 
 .popular-list {
@@ -565,6 +580,7 @@ section.slide {
 	font-family: "Gilroy", Arial, sans-serif;
 	font-weight: bold;
 	text-align: left;
+	line-height: 24px;
 	letter-spacing: 0.01em;
 	margin-top: 38px;
 	color: black;
@@ -678,6 +694,8 @@ section.slide {
 	font-family: "Gilroy", Arial, sans-serif;
 	font-weight: bold;
 	margin-bottom: 25px;
+	letter-spacing: 0.01em;
+	line-height: 47px;
 }
 
 .service-content p {
@@ -686,8 +704,9 @@ section.slide {
 	font-size: 15px;
 	font-family: "Open Sans", Arial, sans-serif;
 	color: #a0a0a0;
-	line-height: 2;
+	line-height: 30px;
 	max-width: 440px;
+	letter-spacing: 0.01em;
 }
 
 .service-content:nth-child(1)::before {
@@ -740,14 +759,16 @@ section.slide {
 	 /* Firefox 10+, Firefox on Android */
 	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'saturate\' values=\'0\'/></filter></svg>#grayscale");
 	
-	filter: grayscale(100%); /* Current draft standard */
 	/* IE 6-9 */
 	filter: gray;
 
 	/* Chrome 19+, Safari 6+, Safari 6+ iOS */
 	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	-ms-filter:grayscale(100%);
 	opacity: 0.2;
     filter: alpha(opacity=20); /* For IE8 and earlier */
+	filter: grayscale(100%); /* Current draft standard */
 	
 }
 
@@ -765,6 +786,8 @@ section.slide {
 	font-size: 47px;
 	font-family: "Gilroy", Arial, sans-serif;
 	font-weight: bold;
+	letter-spacing: 0.01em;
+	line-height: 48px;
 }
 
 .more-info  > *::before {
@@ -797,25 +820,28 @@ section.slide {
 	font-size: 15px;
 	font-family: "Open Sans", Arial, sans-serif;
 	color: #a0a0a0;
-	line-height: 2;
+	line-height: 30px;
 	max-width: 493px;
+	letter-spacing: 0;
 }
 
 .contacts p {
 	font-size: 15px;
 	font-family: "Open Sans", Arial, sans-serif;
 	color: #a0a0a0;
-	line-height: 2;
+	line-height: 30px;
 	max-width: 550px;
+	letter-spacing: 0;
 }
 
 .transport-comp {
 	list-style: disc outside none;
 	font-size: 16px;
-	line-height: 2.5;
+	line-height: 40px;
 	font-family: "Gilroy", Arial, sans-serif;
 	font-weight: bold;
 	margin-left: 35px;
+	letter-spacing: 0;
 }
 
 .more-info.wrapper a:last-child {
@@ -866,16 +892,26 @@ section.slide {
 	margin-right: auto;
 }
 
-.user-navigation-bot a:nth-child(2)::before{
+/*.user-navigation-bot a:nth-child(2)::before{
 	content: '';
 	position: absolute;
 	-webkit-mask: url('../img/user.svg') no-repeat 100% 100%;
 	mask: url('../img/user.svg') no-repeat 100% 100%;
-	/*background-image: url('data:image/svg+xml;utf8,<svg ...><g stroke="red" ... /></g></svg>');*/
-	clip-path: url('../img/user.svg');
-	mask-image: url('../img/user.svg');
-	-webkit-mask-image: url('../img/user.svg');
 	background-color: #ffc600;
+	height: 12px;
+	width: 12px;
+	left: -20px;
+	top: 50%;
+	transform: translateY(-50%);
+}*/
+
+.user-navigation-bot a:nth-child(2)::before {
+	content: '';
+	background-image: url('../img/user2.svg');
+	/*background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="13px" height="12px"><path d="M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543a3.47 3.47 0 0 0 1.687-2.972 3.485 3.485 0 0 0-6.97 0c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z" fill="#ffc600"/></svg>');*/
+	background-repeat:	no-repeat;
+	position: absolute;
+	background-size: 12px 12px;
 	height: 12px;
 	width: 12px;
 	left: -20px;
@@ -886,9 +922,9 @@ section.slide {
 .user-navigation-bot a:nth-last-child(1)::before{
 	content: '';
 	position: absolute;
-	-webkit-mask: url('../img/cart.svg') no-repeat 100% 100%;
-	mask: url('../img/cart.svg') no-repeat 100% 100%;
-	background-color: #ffc600;
+	background-image: url('../img/cart2.svg');
+	background-repeat:	no-repeat;
+	background-size: 12px 12px;
 	height: 12px;
 	width: 12px;
 	left: -20px;
@@ -899,9 +935,9 @@ section.slide {
 .user-navigation-bot a:nth-last-child(2)::before{
 	content: '';
 	position: absolute;
-	-webkit-mask: url('../img/compare.svg') no-repeat 100% 100%;
-	mask: url('../img/compare.svg') no-repeat 100% 100%;
-	background-color: #ffc600;
+	background-image: url('../img/compare2.svg');
+	background-repeat:	no-repeat;
+	background-size: 12px 12px;
 	height: 12px;
 	width: 12px;
 	left: -20px;
@@ -942,6 +978,8 @@ section.slide {
 	color: white;
 	font-size: 15px;
 	font-family: "Open Sans", Arial, sans-serif;
+	letter-spacing: 0;
+	line-height: 30px;
 }
 
 .site-navigation-bot {
@@ -959,6 +997,7 @@ section.slide {
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.2em;
+	line-height: 24px;
 }
 
 .site-navigation-bot li {
@@ -1051,6 +1090,7 @@ a.bot-logo {
 	font-family: "Gilroy", Arial, sans-serif;
 	font-weight: bold;
 	color: #ffc600;
+	letter-spacing: 0.01em;
 }
 
 .interactive {
@@ -1058,8 +1098,9 @@ a.bot-logo {
 	background: 0;
 	text-transform: uppercase;
 	display: inline-block;
-	vertical-align: top;
+	vertical-align: middle;
 	font-size: 18px;
+	line-height: 24px;
 	font-family: "Gilroy", Arial, sans-serif;
 	font-weight: bold;
 	text-align: center;
@@ -1114,7 +1155,7 @@ a.bot-logo {
 	margin-left:  auto;
 	background-color: white;
 	width: 960px;
-	height: 553px;
+	min-height: 553px;
 	box-shadow: 0 0 10px rgba(0,0,0,0.5);
 	padding: 100px;
 	position: relative;
@@ -1147,6 +1188,8 @@ a.bot-logo {
 	font-size: 18px;
 	font-family: "Gilroy", Arial, sans-serif;
 	font-weight: bold;
+	letter-spacing: 0;
+	line-height: 24px;
 }
 
 .write-us input,
@@ -1157,11 +1200,22 @@ a.bot-logo {
 	padding: 20px;
 	font-size: 14px;
 	font-family: "Open Sans", Arial, sans-serif;
+	line-height: 18px;
+	letter-spacing: 0;
+	font-weight: 700;
 }
 
 .write-us textarea {
 	min-height: 156px;
 	resize: none;
+}
+
+.write-us input:valid {
+	background-color: #f2f2f2;
+}
+
+.write-us input:invalid {
+	background-color: #f6dada;
 }
 
 .write-us input:hover,
@@ -1175,9 +1229,6 @@ a.bot-logo {
 	outline: 3px solid #f7e296;
 }
 
-.write-us input:invalid {
-	background-color: #f6dada;
-}
 
 .write-us .interactive {
 	width: 200px;
@@ -1211,8 +1262,10 @@ a.bot-logo {
 	margin-bottom: 35px;
 	margin-top: 100px;
 	display: inline-block;
-	vertical-align: top;
+	vertical-align: middle;
 	margin-left: 60px;
+	letter-spacing: 0.01em;
+	line-height: 48px;
 }
 
 .breadcrumbs {
@@ -1250,6 +1303,7 @@ a.bot-logo {
 	color: black;
 	letter-spacing: 0.01em;
 	opacity: 0.3;
+	line-height: 24px;
 }
 
 .breadcrumbs a:hover {
@@ -1265,8 +1319,21 @@ a.bot-logo {
 	height: 70px;
 }
 
-.filter-name {
+.background-left-top {
+	flex-grow: 1;
 	background-color: #dcdcdc;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.background-right-top  {
+	flex-grow: 1;
+	background-color: #efefef;
+	display: flex;
+	justify-content: flex-start;
+}
+
+.filter-name {
 	text-align: left;
 	min-width: 330px;
 	margin-bottom: 0px;
@@ -1286,15 +1353,14 @@ a.bot-logo {
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.2em;
+	line-height: 24px;
 }
 
 .sort {
-	background-color: #efefef;
 	min-width: 830px;
 	display: flex;
 	padding-top: 20px;
-	padding-left: 70px;
-	
+	padding-left: 70px;	
 }
 
 .sort-options-list {
@@ -1319,6 +1385,9 @@ a.bot-logo {
 	font-family: "Open Sans", Arial, sans-serif;
 	color: black;
 	opacity: 0.3;
+	font-weight: 700;
+	letter-spacing: 0;
+	line-height: 18px;
 }
 
 .sort-options-list a:hover {
@@ -1345,6 +1414,7 @@ a.bot-logo {
 .sort-option:nth-last-child(1) a::before{
 	content: "";
     display: inline-block;
+	vertical-align: middle;
     border: 12px solid black;
     border-right-width: 6px;
     border-left-width: 6px;
@@ -1356,6 +1426,7 @@ a.bot-logo {
 .sort-option:nth-last-child(2) a::before{
 	content: "";
     display: inline-block;
+	vertical-align: middle;
     border: 12px solid black;
     border-right-width: 6px;
     border-left-width: 6px;
@@ -1364,23 +1435,12 @@ a.bot-logo {
 	border-top-width: 0;
 }
 
-.background-left-top {
-	flex-grow: 1;
-	background-color: #dcdcdc;
-}
-
-.background-right-top  {
-	flex-grow: 1;
-	background-color: #efefef;
-}
-
 .filter-and-goods {
 	display: flex;
 }
 
 .catalog-form {
 	min-width: 330px;
-	background-color: #efefef;
 	padding-left: 60px;
 	padding-right: 70px;
 	font-size: 14px;
@@ -1419,10 +1479,14 @@ fieldset.price {
 .background-left-bot {
 	flex-grow: 1;
 	background-color: #efefef;
+	display: flex;
+	justify-content: flex-end;
 }
 
 .background-right-bot {
 	flex-grow: 1;
+	display: flex;
+	justify-content: flex-start;
 }
 
 .goods {
@@ -1465,7 +1529,7 @@ fieldset.price {
 	color: rgb(0, 0, 0);
 	font-weight: bold;
 	letter-spacing: 0.01em;
-	line-height: 1.333;
+	line-height: 24px;
 	max-width: 256px;
 }
 
@@ -1538,8 +1602,9 @@ fieldset.price {
 	background: 0;
 	font-size: 13px;
 	font-family: "Open Sans", Arial, sans-serif;
-	letter-spacing: 0.01;
+	letter-spacing: 0.01em;
 	opacity: 0.5;
+	line-height: 20px;
 }
 
 .add-to-compare:hover {
@@ -1556,6 +1621,8 @@ fieldset.price {
 	font-family: "Gilroy", Arial, sans-serif;
 	color: rgb(70, 70, 70);
 	text-align: right;
+	letter-spacing: 0.01em;
+	line-height: 24px;
 }
 
 .paginaton-btns {
@@ -1582,6 +1649,7 @@ fieldset.price {
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.2em;
+	line-height: 24px;
 	color: black;
 	flex-grow: 1;
 }
@@ -1638,6 +1706,7 @@ fieldset.price {
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.2em;
+	line-height: 24px;
 }
 
 .filter h4 {
@@ -1645,6 +1714,7 @@ fieldset.price {
 	font-family: "Gilroy", Arial, sans-serif;
 	font-weight: bold;
 	letter-spacing: 0.01em;
+	line-height: 24px;
 	margin-top: 16px;
 	margin-bottom: 15px;
 }
