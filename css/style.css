@@ -362,7 +362,7 @@ section.slide {
 
 .slide-wrapper-in {
 	width: 300%;
-    transition: transform 0s ease;
+    transition: transform 0.4s ease;
 	display: flex;
 }
 
@@ -832,43 +832,12 @@ section.slide {
 	position: relative;
 }
 
-.brand-logo:nth-child(1)::before {
-	background-image: url('../img/logo-1-grey.jpg');
-	height: 100px;
-	width: 260px;
+.brand-link img:first-child {
 	position: absolute;
 	z-index: 10;
-	content: '';
 }
 
-.brand-logo:nth-child(2)::before {
-	background-image: url('../img/logo-2-grey.jpg');
-	height: 100px;
-	width: 260px;
-	position: absolute;
-	z-index: 10;
-	content: '';
-}
-
-.brand-logo:nth-child(3)::before {
-	background-image: url('../img/logo-3-grey.jpg');
-	height: 100px;
-	width: 260px;
-	position: absolute;
-	z-index: 10;
-	content: '';
-}
-
-.brand-logo:nth-child(4)::before {
-	background-image: url('../img/logo-4-grey.jpg');
-	height: 100px;
-	width: 260px;
-	position: absolute;
-	z-index: 10;
-	content: '';
-}
-
-.brand-logo:hover::before {
+.brand-link:hover img:first-child {
 	z-index: -1;
 }
 
@@ -1265,6 +1234,7 @@ a.bot-logo {
 	z-index: 1; 
 	color: black;
 	padding: 9px;
+	cursor: pointer;
 }
 
 .interactive::before{
@@ -1292,6 +1262,13 @@ a.bot-logo {
 
 .interactive:active  {
 	color: rgba(0, 0, 0, 0.3);
+}
+
+.map-poppup {
+	cursor: pointer;
+	width: 560px;
+	height: 222px;
+	margin-top: 15px;
 }
 
 .modal-map {
@@ -1798,6 +1775,7 @@ fieldset.bluetooth {
 	letter-spacing: 0.01em;
 	opacity: 0.5;
 	line-height: 20px;
+	cursor: pointer;
 }
 
 .add-to-compare:hover {
