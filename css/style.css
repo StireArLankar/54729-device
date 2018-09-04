@@ -390,7 +390,6 @@ section.slide {
     width: 10px;
     height: 10px;
     margin: 0 5px;
-    background-color: ;
     border: 3px solid white;
     border-radius: 50%;
     box-shadow: 0px 0px 0px 1px black;
@@ -1194,12 +1193,12 @@ li:nth-child(3) .social-button::before {
 }
 
 .html-academy:before {
-//IE No click hack by covering the element.
-	display:block;
-	position:absolute;
-	height:34px;
-	width:27px;
-	content:' ';
+/*IE No click hack by covering the element.*/
+	display: block;
+	position: absolute;
+	height: 34px;
+	width: 27px;
+	content: '';
 }
 
 .phone {
@@ -1374,6 +1373,8 @@ a.bot-logo {
 
 .modal-close {
 	background: 0;
+	background-color: white;
+	border-radius: 50%;
 	position: absolute;
 	top: 10px;
 	right: 10px;
@@ -1601,7 +1602,7 @@ a.bot-logo {
 	padding-right: 70px;
 	font-size: 14px;
 	font-family: "Open Sans", Arial, sans-serif;
-	letter-spacing: 0.01;
+	letter-spacing: 0.01em;
 }
 
 .catalog-form fieldset {
@@ -1925,12 +1926,12 @@ input[type = 'range'] {
 }
 
 .form-radio-label:before {
-//IE No click hack by covering the element.
-	display:block;
-	position:absolute;
-	height:100%;
-	width:100%;
-	content:' ';
+/*IE No click hack by covering the element.*/
+	display: block;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	content: '';
 }
 
 .form-radio:checked + .form-radio-indicator::before {
@@ -1988,21 +1989,20 @@ input[type = 'range'] {
 }
 
 .form-checkbox-label:before {
-//IE No click hack by covering the element.
-	display:block;
-	position:absolute;
-	height:100%;
-	width:100%;
-	content:' ';
+/*IE No click hack by covering the element.*/
+	display: block;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	content: '';
 }
-
 
 .form-checkbox-indicator {
     position: absolute;
-	border: 2px solid black;
-    height: 24px;
-    width: 24px;
-    border-radius: 4px;     
+	background-image: url('../img/checkbox-off.svg');
+	background-repeat: no-repeat;
+    height: 23px;
+    width: 23px; 
 	left: 5px;
 	top: 50%;
 	transform: translateY(-50%);
@@ -2015,15 +2015,9 @@ input[type = 'range'] {
 	z-index: -1;
 }
 
-.form-checkbox:checked + .form-checkbox-indicator::before {
-	position: absolute;
-    font-size: 25px;
-	font-family: "Gilroy", Arial, sans-serif;
-	font-weight: bold;
-    left: 7px;
-    top: -8px;
-    content: '\02143';
-    transform: rotate(40deg);
+.form-checkbox:checked + .form-checkbox-indicator {
+	background-image: url('../img/checkbox-on.svg');
+    width: 27px; 
 }
 
 .form-checkbox:disabled ~ *, .form-checkbox:disabled{
@@ -2038,19 +2032,14 @@ input[type = 'range'] {
 	opacity: 1;
 }
 
-.form-checkbox-label:active .form-checkbox:not(:disabled):checked +  .form-checkbox-indicator::before {
-	content: '';
+.form-checkbox-label:active .form-checkbox:not(:disabled):checked +  .form-checkbox-indicator {
+	background-image: url('../img/checkbox-off.svg');
+    width: 23px; 
 }
 
-.form-checkbox-label:active .form-checkbox:not(:disabled):not(:checked) +  .form-checkbox-indicator::before {
-	position: absolute;
-    font-size: 25px;
-	font-family: "Gilroy", Arial, sans-serif;
-	font-weight: bold;
-    left: 7px;
-    top: -8px;
-    content: '\02143';
-    transform: rotate(40deg);
+.form-checkbox-label:active .form-checkbox:not(:disabled):not(:checked) +  .form-checkbox-indicator{
+	background-image: url('../img/checkbox-on.svg');
+    width: 27px; 
 }
 
 .range-filter {
@@ -2080,10 +2069,11 @@ input[type = 'range'] {
 	position: absolute;
 	left: 0;
 	top: -10px;
-	width: 4px;
-	height: 4px;
+	width: 0px;
+	height: 0px;
 	padding: 0;
-	
+	transform: translateY(-50%);
+	transform: translateX(-50%);
 	border: 10px solid #ffffff;
 	background-color: #ababab;
 	box-shadow: 0 2px 1px 0 #cfcfcf;
@@ -2099,6 +2089,10 @@ input[type = 'range'] {
 	background-color: #ababab;
 	position: absolute;
 	transform: translate(-50%,-50%);
+}
+
+.range-controls .toggle:hover {
+	border: 11px solid #ffffff;
 }
 
 .range-controls .toggle-min {
@@ -2172,4 +2166,8 @@ input[type = 'range'] {
 .modal-error {
 	animation-name: shake;
 	animation-duration: 0.6s;
+}
+
+.modal-map iframe {
+	frameborder: 0;
 }

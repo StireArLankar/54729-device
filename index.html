@@ -333,16 +333,16 @@
 	
 	<section class = 'modal modal-map'>
 		<img src = 'img/map-big.jpg' height = '560' width = '960' alt = 'Как проехать'>
-		<iframe src = "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2249.1125477584787!2d37.5274293!3d55.687031!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1536006206485" width = "960" height = "560" frameborder = "0" style = "border:0" allowfullscreen></iframe>
+		<iframe src = "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2249.1125477584787!2d37.5274293!3d55.687031!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1536006206485" width = "960" height = "560" style = "border:0" allowfullscreen></iframe>
 		<button type = 'button' class = 'modal-close' aria-label = 'Закрыть карту' tabindex = '0' ></button>
 	</section>
 
 	<section class = 'modal modal-write-us'>
-		<form action = 'asd' method = 'post'>
+		<form action = 'https://echo.htmlacademy.ru' method = 'post'>
 			<div class = 'name-and-mail'>
 				<div class = 'name-input'>
 					<label for = 'name-field'>Ваше имя:</label>
-					<p><input type = 'text' name = 'name' id = 'name-field' class = 'name-field' placeholder = 'Имя Фамилия'></p>
+					<p><input type = 'text' pattern = '^[А-Яа-яЁё\s]+$' name = 'name' id = 'name-field' class = 'name-field' placeholder = 'Имя Фамилия'></p>
 				</div>
 				
 				<div class = 'mail-input'>
