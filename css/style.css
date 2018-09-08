@@ -2337,7 +2337,7 @@ input[type = 'range'] {
 }
 
 .form-radio-label:hover  .form-radio:not(:disabled) +.form-radio-indicator,
-.form-radio-label:focus  .form-radio:not(:disabled) +.form-radio-indicator {
+.form-radio:not(:disabled):focus +.form-radio-indicator {
 	opacity: 0.6;
 }
 
@@ -2434,7 +2434,7 @@ input[type = 'range'] {
 }
 
 .form-checkbox-label:hover  .form-checkbox:not(:disabled) +.form-checkbox-indicator ,
-.form-checkbox-label:focus  .form-checkbox:not(:disabled) +.form-checkbox-indicator {
+.form-checkbox:not(:disabled):focus +.form-checkbox-indicator {
 	opacity: 0.6;
 }
 
